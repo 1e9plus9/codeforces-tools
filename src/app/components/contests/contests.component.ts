@@ -64,7 +64,7 @@ export class ContestsComponent implements OnInit {
         console.log('here')
         let contests: Contest[] = []
         for (const i of this.contests) {
-          if (banned.has(i.id)) {
+          if (!banned.has(i.id)) {
             contests.push(i);
           }
         }
